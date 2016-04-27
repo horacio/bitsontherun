@@ -11,7 +11,7 @@ describe "API call to delete video files" do
   
   it "should contain confirmation about deleted video" do
     @responses.each do |r|
-      r.ok?.should be_true
+      r.ok?.should be_truthy
     end
   end
 end

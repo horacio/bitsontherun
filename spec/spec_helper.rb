@@ -4,7 +4,8 @@ require 'shared_specs'
 require 'webmock/rspec'
 
 RSpec.configure do |c|
-  c.mock_with :rspec
+  c.mock_with(:rspec)
+  c.expect_with(:rspec) { |c| c.syntax = :should }
 end
 
 BitsOnTheRun.key    = "your api key"
